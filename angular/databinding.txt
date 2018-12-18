@@ -1,0 +1,65 @@
+What is data bindig
+data bindig means communication between your code and template files. Like we assign any value to variable and output  value into the template file. 
+
+lets discuss about data binding and see some examples.
+Data binding can be one way or two way.
+
+1. String Interpolation
+2. Property Binding
+3. Event Binding
+4. Two-way binding
+
+1. String Interpolation :- 
+
+String interpolcation is one way databinding. Define a variable in your component. assign value to the variable. you can output this value in template file . 
+
+for eg. fruit : string = "apple";
+
+we can output this value with the help of  double curly breaces {{fruit}}
+
+when you run your file you can see the output. it shoud print apple.
+
+2. Property Binding :- 
+
+Property binding is also one way data binding. This is similar to strign interpolation. But property binding have more clear syntex then strign interpolation when you use it with html elements.
+
+For Example – <img [src]=”imgUrl” />
+
+How it works in simple words. 
+
+when we denfine property like in squre brackes eg [src] it will find the variable in the component. in our case "imgUrl".
+
+3. Event Binding : - 
+
+Event binding means when we wants to bind data on specific event eg. click, hover , keyup etc. If you have worked in jquery or in java script you may have basic understaing of events. 
+
+let us look an example.
+
+suppose you want to perform any action on button click. then we can use event bindig like this.
+
+
+<button (click)="onSave()">Save</button>
+
+In this example when you click on save button. it will find the onSave() function in your component.  and it will show you alert.
+
+
+ onSave() {
+    alert('yeaaaa!!');
+  } 
+4. Two-Way Data Binding :  
+
+For two-way data binding, we combine property binding and event binding both. 
+
+lets look and example. 
+
+For use two way binding you need to add module in app.module.ts file.
+---------------------
+import {FormsModule} from '@angular/forms'; 
+
+ imports: [
+    BrowserModule,
+    FormsModule
+  ],
+ --------------------------------
+
+ Now when you type in text box . variable will autobind. 

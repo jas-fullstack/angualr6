@@ -12,3 +12,4 @@ export class PostsService {
     return this.http.get('http://jsonplaceholder.typicode.com/users');
   }
 }
+

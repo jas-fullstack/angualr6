@@ -1,0 +1,13 @@
+{{fruit}}
+<br/>
+addition is : {{addnumber()}}
+<br/>
+<img [src] = "imgSrc" >
+<br/>
+<button class="anku" (click)="onSave($event)">save</button>
+<br/>
+<input [(ngModel)]="fullName" >
+{{fullName}}
+<ul>
+    <li *ngFor ="let all_d as data">{{all_d.name}} </li>
+</ul>

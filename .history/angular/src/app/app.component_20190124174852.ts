@@ -26,14 +26,14 @@ export class AppComponent {
     this.PostsService.allPosts().subscribe(
       response => { 
         this.data=response.json();
-         console.log(this.data);
+        //  console.log(this.data);
       }
     );
-    /*
+    
   setTimeout(() => {
     console.log(this.data);
   }, 300);
-     */ 
+     
 
   }
 

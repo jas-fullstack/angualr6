@@ -9,7 +9,7 @@ export class PostsService {
   constructor(private  http:Http) { }
   allPosts(){
     //return {1 : 'linkedin', 2 : "fb", 3 :"instagram"}
-    return this.http.get('http://localhost:3005/notes');
+    return this.http.get('http://jsonplaceholder.typicode.com/users');
   }
 }
 

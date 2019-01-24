@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';  
- 
+import {FormsModule} from '@angular/forms';  
+
 import { AppComponent } from './app.component';
 import { PostsService } from './posts.service';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './/app-routing.module';
 import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    RouterModule.forRoot(RouterModuletes)
   ],
   providers: [
     PostsService

@@ -1,0 +1,39 @@
+<html>  
+  
+<head>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+</head>  
+
+    <div id="textboxDiv">
+        <div class="parent_div"><br>
+            <input type='text'    />
+            <input type='text'    />
+            <input type='text'  class="last_text_box add_row" />
+                 
+            <br>
+        </div>
+      
+    </div>  
+    <script>  
+        $(document).ready(function() {
+            
+            $(document).on('keydown','.add_row',function(e){    
+
+                if($(this).parents('.parent_div').find('input').val()){
+                        if (e.which == 9){
+                        $(this).removeClass('add_row');
+                    
+                    $("#textboxDiv").append("<div class='parent_div'><br><input type='text'/><input type='text'/><input type='text' class='last_text_box add_row' /><a class='remove_row' href=javascript:void(0)>x</a><br></div>");
+                    }  
+                }
+                });
+                
+              $(document).on('click','.remove_row',function(){
+                    $(this).parents('.parent_div').remove();
+              }); 
+           
+        });  
+    </script>  
+</body>  
+  
+</html>  
